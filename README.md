@@ -1,105 +1,113 @@
-## So_long
+<h1 align="center">So_long</h1>
+
+<div align="center">
+<img alt="Static Badge" src="https://img.shields.io/badge/Status-Finished-green">
+<img alt="Static Badge" src="https://img.shields.io/badge/42-Project-blue">
+<img alt="Static Badge" src="https://img.shields.io/badge/Language-C-lightgrey">
+<img alt="Static Badge" src="https://img.shields.io/badge/Library-MiniLibX-orange">
+</div>
+
+## Demo
 
 [so_longg.webm](https://github.com/user-attachments/assets/6238759d-f748-4026-a016-ef4d52b0d9fc)
 
-## Sobre
+## About
 
-O **so_long** é um projeto de jogo 2D desenvolvido como parte do common core da 42 com foco em conceitos básicos de desenvolvimento de jogos e programação gráfica. Este projeto serve como uma introdução ao desenvolvimento de jogos utilizando a biblioteca MiniLibX, uma ferramenta para criar interfaces gráficas simples em ambientes Unix-like.
+**So_long** is a 2D game project developed as part of 42's common core, focused on fundamental game development and graphics programming concepts. This project serves as an introduction to game development using the **MiniLibX** library, a tool for building simple graphical interfaces on Unix-like systems.
 
-### Objetivo do Jogo
+### Game Objective
 
-O objetivo principal do **so_long** é guiar o jogador através de um labirinto, coletar todos os itens disponíveis e encontrar a saída. O jogo é projetado para ser simples, mas oferece uma boa prática em diversos aspectos do desenvolvimento de jogos:
+The main goal of **So_long** is to guide the player through a maze, collect all available items, and find the exit. The game is designed to be simple, while still providing solid practice across several aspects of game development:
 
-- **Navegação em Labirintos**: O jogador deve explorar o labirinto, utilizando o teclado para mover-se e coletar os itens.
-- **Coleta de Itens**: Itens estão espalhados pelo labirinto e devem ser coletados antes de encontrar a saída.
-- **Condição de Vitória**: O nível é considerado completo quando todos os itens foram coletados e o jogador alcançou a saída.
+- **Maze Navigation** — the player explores the maze, using the keyboard to move around and collect items.
+- **Item Collection** — items are scattered throughout the maze and must be collected before reaching the exit.
+- **Win Condition** — the level is completed once all items have been collected and the player has reached the exit.
 
+### Development Approach
 
-### Abordagem de Desenvolvimento
+**So_long** was built using the MiniLibX library, which provides the basic functionality needed to create a graphical interface and handle keyboard events. The project follows a modular architecture, making it easier to maintain and extend. The main components of the game include:
 
+- **Game Module** — manages the main game loop, updates, and screen rendering.
+- **Map Module** — loads and parses the map file, which defines the maze layout, items, and exit.
+- **Player Module** — controls player movement and interaction with the game environment.
 
-O **so_long** foi desenvolvido utilizando a biblioteca MiniLibX, que fornece as funcionalidades básicas necessárias para criar uma interface gráfica e lidar com eventos do teclado. O projeto segue uma arquitetura modular, o que facilita a manutenção e a adição de novas funcionalidades. Os principais componentes do jogo incluem:
+### Technologies & Tools
 
-- **Módulo de Jogo**: Gerencia o loop principal do jogo, atualizações e renderização da tela.
-- **Módulo de Mapa**: Carrega e interpreta o arquivo de mapa, que define a disposição do labirinto, itens e saída.
-- **Módulo de Jogador**: Controla a movimentação do jogador e a interação com o ambiente do jogo.
+- **C** — the main language used to develop the game.
+- **MiniLibX** — graphics library providing functions to draw graphics and manage window events.
+- **X11** — the windowing system used by MiniLibX to create and manage windows on Unix-like systems.
 
+### Educational Purpose
 
-### Tecnologias e Ferramentas
+**So_long** was created to provide hands-on understanding of core game development concepts, including:
 
+- **2D graphics development** — using MiniLibX to render graphics and handle the user interface.
+- **Game logic** — implementing rules and win conditions in a simple game.
+- **Resource management** — loading and parsing map files to define the game layout.
 
-- **C Language**: A linguagem principal utilizada para o desenvolvimento do jogo.
-- **MiniLibX**: Biblioteca gráfica que fornece funções para desenhar gráficos e gerenciar eventos em uma janela.
-- **X11**: Sistema de janelas utilizado pela MiniLibX para criar e manipular janelas em sistemas Unix-like.
+This project is ideal for beginners who want to learn about game programming and graphics development in C, providing a solid foundation on which more complex games can be built.
 
+## Table of Contents
 
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Contributing](#contributing)
+- [Contact](#contact)
 
-### Propósito Educacional
+## Requirements
 
-
-O **so_long** foi criado para fornecer uma compreensão prática dos conceitos básicos de desenvolvimento de jogos, incluindo:
-
-- **Desenvolvimento Gráfico 2D**: Usando a MiniLibX para renderizar gráficos e lidar com a interface do usuário.
-- **Lógica de Jogo**: Implementando regras e condições de vitória em um jogo simples.
-- **Gerenciamento de Recursos**: Carregamento e interpretação de arquivos de mapa para definir o layout do jogo.
-
-Este projeto é ideal para iniciantes que desejam aprender sobre programação de jogos e desenvolvimento gráfico em C, oferecendo uma base sólida sobre a qual é possível construir jogos mais complexos.
-
-
-## Requisitos
-
-
-Para compilar e executar o **so_long**, você precisará de:
+To build and run **So_long**, you'll need:
 
 - [MiniLibX](https://github.com/42Paris/minilibx-linux)
-- [Compilador C](https://gcc.gnu.org/)
+- [C Compiler](https://gcc.gnu.org/)
 - [Make](https://www.gnu.org/software/make/)
 
+## Installation
 
-## Instalação
+1. Clone the repository:
 
+    ```bash
+    git clone https://github.com/seu_usuario/so_long.git
+    cd so_long
+    ```
 
-1. Clone o repositório:
+2. Install MiniLibX:
 
-   ```
-   git clone https://github.com/seu_usuario/so_long.git
-   cd so_long
-   ```
+    ```bash
+    git clone https://github.com/42Paris/minilibx-linux
+    cd minilibx-linux
+    make
+    cd ..
+    ```
 
-2. Instale a Minilibx
+3. Build the project:
 
-```
-git clone https://github.com/42Paris/minilibx-linux
-cd minilibx-linux
-make
-cd ..
-```
+    ```bash
+    make
+    ```
 
-3.Compile o projeto:
+4. Run the game:
 
-```
-make
-```
+    ```bash
+    ./so_long map_file.ber
+    ```
 
-4. Execute o jogo:
+    Replace `map_file.ber` with the path to the map file you want to play.
 
-```
-./so_long map_file.ber
-```
+## Contributing
 
-Substitua [map_file.ber] pelo caminho para o arquivo do mapa que você deseja jogar.
+Contributions are welcome! If you'd like to help improve **So_long**, follow these steps:
 
-## Contribuição
+1. Fork the repository.
+2. Create a branch for your feature (`git checkout -b feature/MyFeature`).
+3. Make your changes and commit them (`git commit -am 'Add new feature'`).
+4. Push to the branch (`git push origin feature/MyFeature`).
+5. Open a Pull Request.
 
-Contribuições são bem-vindas! Se você deseja ajudar a melhorar o so_long, siga estas etapas:
+## Contact
 
-Fork o repositório.
-Crie uma branch para a sua feature (git checkout -b feature/MinhaFeature).
-Faça suas alterações e commit (git commit -am 'Adiciona nova feature').
-Push para a branch (git push origin feature/MinhaFeature).
-Abra um Pull Request.
+If you have any questions or need help, feel free to open an issue or reach out :)
 
-## Contato
+---
 
-Se você tiver dúvidas ou precisar de ajuda, sinta-se à vontade para abrir uma issue ou entrar em contato (:
-   
+<p align="center">Built as part of the 42 curriculum 🖥️</p>
